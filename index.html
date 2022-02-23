@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title> 윤한힘 .attr() tab </title>
+    <script src="./script/jquery-1.11.3.js"></script>
+    <script>
+        // .attr() - 선택한 요소에 새 속성을 생성하거나 변경
+    $(function(){
+        $(".btn1").on("click",function(){
+            $(".frame img").attr({"src":"./images/img01.gif","alt":"네온효과"}); // 새 속성 생성 
+        });
+        $(".btn2").on("click",function(){
+            $(".frame img").attr({"src":"./images/img02.png","alt":"슈야"}); 
+        });
+        $(".btn3").on("click",function(){
+            $(".frame img").attr({"src":"./images/img03.png","alt":"메탈글자"}); 
+        });
+        $(".btn4").on("click",function(){
+            $(".frame img").attr({"src":"./images/img04.png","alt":"불꽃글자"}); 
+        });
+        $(".btn5").on("click",function(){
+            $(".frame img").attr({"src":"./images/img05.png","alt":"아이콘"}); 
+        });
+        $(".btn6").on("click",function(){
+            $(".frame img").attr({"src":"./images/img06.png","alt":"황금비율로고"}); 
+        });
+    });
+    </script>
+    <style>
+        * {margin: 0; padding: 0;}
+        body {background: #dedede;}
+        ul, li {margin: 0; padding: 0; list-style: none;}
+        #design {position: absolute; 
+        top: 50%; left: 50%; 
+        transform: translate(-50%,-50%);
+        }
+        #design .menu ul {display: flex;
+        justify-content: space-between;
+        }
+        #design .menu ul li a{display: block;
+        background: #000; font-size: 14px;
+        text-decoration: none;
+        color: #fff;
+        width: 110px; 
+        height: 35px; /* 추가 */ 
+        line-height: 35px; /* 추가 */
+        /* padding: 10px 0 10px 0; */ 
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        }
+        #design .menu ul li a:hover {background: #999;}
+        #design .menu ul li a:focus {background: #666;}
+    </style>
+</head>
+<body>    
+    <!-- .design>.menu>ul>li*6>a.btn$ -->
+    <div id="design">
+        <!-- menu -->
+        <div class="menu">
+            <ul>
+                <li><a href="#" class="btn1">네온효과</a></li>
+                <li><a href="#" class="btn2">슈아</a></li>
+                <li><a href="#" class="btn3">메탈글자</a></li>
+                <li><a href="#" class="btn4">불꽃글자</a></li>
+                <li><a href="#" class="btn5">아이콘</a></li>
+                <li><a href="#" class="btn6">황금비율로고</a></li>
+            </ul>
+        </div>
+        <!-- frame -->
+        <!-- .frame>a>img -->
+        <div class="frame"><a href="#"><img src="./images/img01.gif" alt="name animation"></a></div>
+    </div>
+</body>
+</html>
